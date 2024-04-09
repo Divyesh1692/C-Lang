@@ -2,7 +2,7 @@
 #include<conio.h>
 void main()
 {
-	int a = 12,  b = 6;
+	int sum, a = 12,  b = 6;
 	clrscr();
 	sum = a+b;
 	sub = a-b;

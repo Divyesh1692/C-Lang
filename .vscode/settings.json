@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "BIODATA.C": "cpp",
+        "CHART_PA.C": "cpp",
+        "RNW_P.C": "cpp",
+        "RNW_PATT.C": "cpp"
+    },
+    "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe"
+}

@@ -1,20 +1,21 @@
 #include<stdio.h>
+#include<string.h>
 main()
-{
-    char a[100];
+{   int n;
+    int a[5] = {1,2,3,4,5};
     system("cls");
-    printf("Enter Any String : ");
-    scanf("%[^\n]",&a);
-    for(int i=0; a[i]!=0; i++)
+    printf("Enter number to find ");
+    scanf("%d",&n);
+    for(int i=0;i<5;i++)
     {
-        if(a[i] >= 97 && a[i]<= 122)
+        if(n==a[i])
         {
-            a[i]-=32;
+            printf(" number = %d",a[i]);
         }
-        else if(a[i]>=65 && a[i]<=90)
-        {
-            a[i]+=32;
+        else{
+            printf(" number not found : ");
         }
-                
-    }printf("%s",a);
-}
+    }
+
+
+}    

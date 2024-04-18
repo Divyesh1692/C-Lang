@@ -1,29 +1,50 @@
-#include<stdio.h>
-main()
+/**
+ * C program to find maximum and minimum element in array
+ */
+
+#include <stdio.h>
+
+#define MAX_SIZE 100   // Maximum array size
+
+int main()
 {
-    int count,j,n=0;
-    char str[10];
-    system("cls");
-    printf("Enter String : ");
-    scanf("%s",&str);
-    for(int i=0;str[i]!=NULL; i++)
-    { n++; }
-    for(int i=0;i<n; i++)
+    int arr[MAX_SIZE];
+    int i, max, min,min2,size;
+
+    /* Input size of the array */
+    printf("Enter size of the array: ");
+    scanf("%d", &size);
+
+    /* Input array elements */
+    printf("Enter elements in the array: ");
+    for(i=0; i<size; i++)
     {
-        count = 1;
-        for(j=i+1;j<n; j++)
-        {
-            if(str[j]==str[i])
-            {
-                count++;
-                str[j]=0;
-            }
-        }
-        if(str[i]!=0)
-        {
-        printf("%c : %d\n",str[i],count);
-        }
+        scanf("%d", &arr[i]);
     }
 
 
+    /* Assume first element as maximum and minimum */
+    max = arr[0];
+    min = arr[0];
+
+    /*
+     * Find maximum and minimum in all array elements.
+     */
+    for(i=1; i<size; i++)
+    {
+        /* If current element is greater than max 
+
+        /* If current element is smaller than min */
+        if(arr[i] < min)
+        {
+            min = arr[i];
+            min2 = arr[5-i];
+        }
+    }
+
+    /* Print maximum and minimum element */
+    printf("Maximum element = %d\n", min);
+    printf("Minimum element = %d", min2);
+
+    return 0;
 }

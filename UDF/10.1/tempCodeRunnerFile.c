@@ -2,6 +2,8 @@
 #include "udf.c"
 void main()
 {
-    int a;
-    check(a);
+   int a = getint("a");
+   checkoddeven(a);
+   multitable(a);
 }
+

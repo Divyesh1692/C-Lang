@@ -20,14 +20,14 @@ void sum(int a,int b)
     int sum;
     printf("Enter Numbers : \n");
     scanf("%d %d",&a,&b);
-    printf("Sum Of Given Numbers Is : %d",a+b);
+    printf("Sum Of %d and %d = %d\n",a,b,a+b);
 }
 void sub(int a,int b)
 {
     int sub;
     printf("Enter Numbers : \n");
     scanf("%d %d",&a,&b);
-    printf("Substraction Of Given Numbers is : %d",a-b);
+    printf("Substraction Of %d and %d = %d\n",a,b,a-b);
     
 }
 void multi(int a,int b)
@@ -35,14 +35,21 @@ void multi(int a,int b)
     int multi;
     printf("Enter Numbers : \n");
     scanf("%d %d",&a,&b);
-    printf("Multiplication of Given Numbers : %d",a*b);
+    printf("Multiplication of %d and %d = %d\n",a,b,a*b);
 }
 void div(int a,int b)
 {
     int div;
     printf("Enter Numbers : \n");
     scanf("%d %d",&a,&b);
-    printf("Division of Given Numbers : %d",a/b);
+    printf("Division of %d and %d = %d\n",a,b,a/b);
+}
+void mod(int a, int b)
+{
+    int mod;
+    printf("Enter Numbers : \n");
+    scanf("%d %d",&a,&b);
+    printf("%d Modulus %d = %d\n",a,b,a%b);
 }
 int getint(char varName[])
 {
@@ -112,4 +119,42 @@ int arraysum(int a[], int n)
         sum+=a[i];
     }
     printf("Array Sum Is : %d",sum);
+}
+void stringlen()
+{
+    int n=0;
+    char str[100];
+    printf("Enter String : ");
+    scanf("%[^\n]",&str);
+    for(int i=0; str[i]!='\0'; i++)
+    {
+        n++; 
+    }
+    printf("String Length is : %d",n);
+}
+void mathop(int n)
+{
+    int a,b;
+    printf("\nPress 1 for +\n");
+    printf("Press 2 for -\n");
+    printf("Press 3 for *\n");
+    printf("Press 4 for /\n");
+    printf("Press 5 for %%\n");
+    printf("Press 0 for Exit\n");
+    printf("Enter Your Choice : ");
+    scanf("%d",&n);
+    switch(n)
+    {
+        case 1 : sum(a,b);
+        mathop(n);
+        case 2 : sub(a,b);
+        mathop(n);
+        case 3 : multi(a,b);
+        mathop(n);
+        case 4 : div(a,b);
+        mathop(n);
+        case 5 : mod(a,b);
+        mathop(n);
+        case 0 : break;
+    }
 }

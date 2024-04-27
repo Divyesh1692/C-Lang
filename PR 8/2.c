@@ -1,23 +1,25 @@
-#include<stdio.h>
+#include"udf.c"
 main()
 {
-    //int r= getint("row");
-    //int c= getint("col");
-    int a[2][2];
+    int row= getint("row");
+    int col= getint("col");
+    int a[row][col];
     int *ptr;
     int cube;
-    for(int i=0;i<2;i++)
+    for(int i=0;i<row;i++)
     {
-        for(int j=0;j<2;j++)
+        for(int j=0;j<col;j++)
         {
             printf("a[%d][%d]: ",i,j);
             scanf("%d",&a[i][j]);
         }
     }
-    for(int i=0;i<2;i++)
+    printf("Cube Of Matrix : \n");
+    ptr = &a;
+    for(int i=0;i<row;i++)
     {
         cube=0;
-        for(int j=0;j<2;j++)
+        for(int j=0;j<col;j++)
         {
             *(ptr+i+j) = a[i][j];
             cube = *(ptr+i+j)**(ptr+i+j)**(ptr+i+j);

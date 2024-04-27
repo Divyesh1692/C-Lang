@@ -178,28 +178,5 @@ int arrayelement(char name[],int i,int j)
     int a[i][j];
     printf("Enter %s[%d][%d] : ",name,i,j);
     scanf("%d",&a[i][j]);
-    return a[i][j];
-}
-void arrayinput(int a[],int row,int col)
-{
-    for(int i=0;i<row;i++)
-    {
-        for (int j=0;j<col;j++)
-        {
-            arrayelement("array",i,j);
-        }
-    }
-}
-void cubeofae(int *a,int row, int col)
-{
-    printf("Cube Of Array Elements : \n");
-    for(int i=0;i<row;i++)
-    {
-        for (int j=0;j<col;j++)
-        {
-            printf("%d ",cubeof(*(a+i*col+j))); 
-        }
-        printf("\n");
-    }
-
+    return &a[i][j];
 }

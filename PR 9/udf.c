@@ -58,6 +58,13 @@ int getint(char varName[])
     scanf("%d", &n);
     return n;
 }
+float getfloat(char varName[])
+{
+    float n;
+    printf("Enter %s: ", varName);
+    scanf("%f", &n);
+    return n;
+}
 int ae(char name[],int index)
 {
     int n;

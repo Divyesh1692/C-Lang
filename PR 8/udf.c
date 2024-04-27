@@ -5,10 +5,18 @@ void cube(int a)
     scanf("%d",&a);
     printf("Cube Of %d is : %d\n",a,a*a*a);
 }
-int cubeof(int a)
+void cubeof(int a[][5],int r,int c)
 {
-    return a*a*a;
+    for(int i=0; i<r; i++)
+    {
+        for(int j=0; j<c; j++)
+        {
+            a[i][j]=a[i][j]*a[i][j]*a[i][j]; 
+        }
+    }
 }
+
+
 void check(int a)
 {
     printf("Enter Number : ");
@@ -179,4 +187,26 @@ int arrayelement(char name[],int i,int j)
     printf("Enter %s[%d][%d] : ",name,i,j);
     scanf("%d",&a[i][j]);
     return &a[i][j];
+}
+void arrayinput(int a[][5],int r,int c)
+{
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0; j<c; j++)
+        {
+           printf("Enter Array[%d][%d] : ",i,j);
+           scanf("%d",&a[i][j]);
+        }
+    }
+}
+void printarray(int a[][5],int r,int c)
+{
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0; j<c; j++)
+        {
+           printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
 }
